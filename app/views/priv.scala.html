@@ -1,0 +1,7 @@
+@import dto.User
+@(user: User)
+
+@main("This is a private page") {
+    <h1>This is a private page</h1>
+    <p>Current user: <strong>@user.username</strong> </p>
+}

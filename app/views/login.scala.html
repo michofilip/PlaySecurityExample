@@ -1,0 +1,16 @@
+@import form.LoginData
+@import views.html.helper.CSRF
+@(loginForm: Form[LoginData])(implicit request: MessagesRequestHeader)
+
+@main("This is a login page") {
+    <h1>This is a login page</h1>
+
+    @helper.form(action = routes.LoginController.login()) {
+        @CSRF.formField
+        @helper.inputText(loginForm("username"))
+        @helper.input(loginForm("password")) { (id, name, value, args) =>
+            <input type="password" name="@name" id="@id" @toHtmlArgs(args)>
+        }
+        <button type="submit">Login</button>
+    }
+}

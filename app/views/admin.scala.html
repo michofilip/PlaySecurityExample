@@ -1,0 +1,7 @@
+@import dto.User
+@(user: User)
+
+@main("This is an admin page") {
+    <h1>This is an admin page</h1>
+    <p>Current admin: <strong>@user.username</strong> </p>
+}
