@@ -22,7 +22,7 @@ class MyController @Inject()(val controllerComponents: ControllerComponents,
     }
 
     def priv(): Action[AnyContent] = authenticated { implicit userReq: UserRequest[AnyContent] =>
-        Ok(views.html.priv2(userReq.user))
+        Ok(views.html.priv(userReq.user))
     }
 
     def admin(): Action[AnyContent] = authenticated.withRole("ADMIN") { implicit userReq: UserRequest[AnyContent] =>

@@ -10,8 +10,6 @@ GET         /public                       controllers.MyController.public()
 GET         /priv                         controllers.MyController.priv()
 GET         /admin                        controllers.MyController.admin()
 
-#GET         /login                        controllers.LoginController.login(username, password)
-#POST        /login2                       controllers.LoginController.login2()
 GET         /login                        controllers.LoginController.loginPage()
 POST        /login                        controllers.LoginController.login()
 GET         /logout                       controllers.LoginController.logout()
