@@ -43,3 +43,6 @@ def adminAllRoles(): Action[AnyContent] = authenticated.withAllRoles("ADMIN", "D
     ...
 }
 ```
+
+This example was based on the blog
+https://pedrorijo.com/blog/scala-play-auth/
